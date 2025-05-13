@@ -1,0 +1,13 @@
+.hidden {
+    display: none;
+}
+
+.rotate {
+    display: inline-block;
+    background-color: aqua;
+}
+
+.age_result_minor_hidden,
+.age_result_major_hidden {
+    display: none;
+}
