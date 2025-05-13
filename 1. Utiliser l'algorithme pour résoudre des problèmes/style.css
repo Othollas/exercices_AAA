@@ -11,3 +11,10 @@
 .age_result_major_hidden {
     display: none;
 }
+
+
+/* j'ai besoin de ce selecteur et de cet indicateur afin de rendre le contour de l'element visible pour l'accessibilité */
+button.clean:focus {
+  outline: 2px solid #007acc;
+  outline-offset: 2px;
+}

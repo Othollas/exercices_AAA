@@ -11,12 +11,18 @@
 <body>
     <header></header>
 
+    <!-- Je dois modifier la structure de l'exercice, je vais finalement crée l'exercice, pour inserer un codepen ou un tableau pour tester le code, puis je vais mettre des indices et enfin je vais mettre le  resultat mais caché.  -->
 
     <section>
         <h1>Exercices</h1>
-        <div id="minor_or_major"id="minor_or_major">
-            <h3>Etre mineur ou majeur 
-                <span class="icone" aria-label="fleche, afficher l'exercice" aria-expanded="Afficher l'exercice, réduit">▶</span></h3>
+        <div id="minor_or_major" id="minor_or_major">
+            <h3>Etre mineur ou majeur
+                <button>
+                    <span>Afficher l'exercice</span>
+                    <span class="icone" aria-label="fleche, afficher l'exercice"
+                        aria-expanded="Afficher l'exercice">▶</span>
+                </button>
+            </h3>
             <form>
                 <div class="hidden">
                     <label for="age">Quel est ton age ?</label>
@@ -29,6 +35,27 @@
             </form>
         </div>
     </section>
+
+    <section>
+        <h3>Trouve le nombre
+            <button>
+                <span>Afficher l'exercice</span>
+                <span class="icone" aria-label="fleche, afficher l'exercice"
+                    aria-expanded="Afficher l'exercice">▶</span>
+            </button>
+        </h3>
+
+        <label for="chiffre_utilisateur">tape un nombre entre 1 et 100</label>
+        <input type="nombre" name="chiffre_utilisateur" id="chiffre_utilisateur">
+        <button id="jouer" >jouer</button>
+        <nav class="vie_restante">Essai restant : 3</nav>
+        <nav class="hidden" id="bas">Ton chiffre est trop bas.</nav>
+        <nav class="hidden" id="haut">Ton chiffre est trop haut.</nav>
+        <nav class="hidden" id="succes">Bravo Tu as bien deviner !!  </nav>
+        <nav class="hidden" id="perdu">Désoler tu as perdu, mais tu peux retenter ta chance</nav>
+        <button class="hidden" id="rejouer">rejouer</button>
+    </section>
 </body>
 <script src="main.js"></script>
+
 </html>
