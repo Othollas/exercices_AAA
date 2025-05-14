@@ -18,3 +18,5 @@ button.clean:focus {
   outline: 2px solid #007acc;
   outline-offset: 2px;
 }
+
+select{display: block;}

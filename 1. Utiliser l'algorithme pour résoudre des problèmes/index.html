@@ -47,14 +47,44 @@
 
         <label for="chiffre_utilisateur">tape un nombre entre 1 et 100</label>
         <input type="nombre" name="chiffre_utilisateur" id="chiffre_utilisateur">
-        <button id="jouer" >jouer</button>
+        <button id="jouer">jouer</button>
         <nav class="vie_restante">Essai restant : 3</nav>
         <nav class="hidden" id="bas">Ton chiffre est trop bas.</nav>
         <nav class="hidden" id="haut">Ton chiffre est trop haut.</nav>
-        <nav class="hidden" id="succes">Bravo Tu as bien deviner !!  </nav>
+        <nav class="hidden" id="succes">Bravo Tu as bien deviner !! </nav>
         <nav class="hidden" id="perdu">Désoler tu as perdu, mais tu peux retenter ta chance</nav>
         <button class="hidden" id="rejouer">rejouer</button>
     </section>
+
+    <section>
+        Exercice 3 : crée une fonction pour vérifier si la personne peut s'incrire à la bibliotheque de Bordeaux.
+        <h3>Puis je m'inscrire ?
+            <button>
+                <span>Afficher l'exercice</span>
+                <span class="icone" aria-label="fleche, afficher l'exercice"
+                    aria-expanded="Afficher l'exercice">▶</span>
+            </button>
+        </h3>
+        <form action="">
+            <label for="plus_que_18">As tu plus de 18 ans ?</label>
+            <select name="plus_que_18" id="plus_que_18">
+                <option value=""></option>
+                <option value="oui">oui</option>
+                <option value="non">non</option>
+            </select>
+
+            <label for="habite_a_bordeaux">Habites à Bordeaux ou dans la CUB ?</label>
+            <select name="habite_a_bordeaux" id="habite_a_bordeaux">
+                <option value="blank"></option>
+                <option value="oui">oui</option>
+                <option value="non">non</option>
+            </select>
+            <button id="bouton_inscription">Envoyer</button>
+        </form>
+
+
+    </section>
+
 </body>
 <script src="main.js"></script>
 
