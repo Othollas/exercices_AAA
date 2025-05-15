@@ -89,3 +89,13 @@ function inscription_bibliotheque(age, lieu) {
         console.log("ok")
     }
 }
+
+// exercice 4 : crée une table de multiplication, où l'utilisateur devra choisir un multiplicateur et cela créera une table de multiplication (par exemple dans une fenetre pop up)
+
+
+// exercice 5 : crée une pyramide à 10 étages grace à une boucle
+
+
+// exercice 6 : crée une fonction qui prend 2 nombre en parametre et renvoie un tableau de multiple de num jusqu'a la longueur definie
+
+// exercice 7 : crée un tableau de fruits (par ex: fraise, melon, raisin). Puis 1/ supprimer raisin, 2/ ajouter "Mandarine" à la fin du tableau, 3/ supprimer melon, et 4/ ajouter orange au debut du tableau
