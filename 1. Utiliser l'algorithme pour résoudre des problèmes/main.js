@@ -27,7 +27,7 @@ butonSubmit.addEventListener("click", (e) => {
 // exercice 2 
 
 let chiffre_a_deviner = Math.floor(Math.random() * 100);
-console.log(chiffre_a_deviner);
+
 let jouer = document.getElementById("jouer");
 let rejouer = document.getElementById("rejouer");
 let gagnant = document.getElementById("succes");
@@ -42,8 +42,6 @@ jouer.addEventListener("click", () => {
     trop_haut.classList.add("hidden");
     rejouer.classList.add("hidden");
 
-    console.log(chiffre_a_deviner)
-    console.log(score)
     if (chiffre_a_deviner > chiffre_utilisateur && score != 0) {
         trop_bas.classList.remove("hidden");
         score -= 1;
@@ -81,7 +79,6 @@ btn_inscription.addEventListener("click", (e) => {
     let habite_a_bordeaux = document.getElementById("habite_a_bordeaux").value;
 
     inscription_bibliotheque(plus_que_18, habite_a_bordeaux)
-    console.log(plus_que_18)
 })
 
 function inscription_bibliotheque(age, lieu) {
@@ -92,6 +89,30 @@ function inscription_bibliotheque(age, lieu) {
 
 // exercice 4 : crée une table de multiplication, où l'utilisateur devra choisir un multiplicateur et cela créera une table de multiplication (par exemple dans une fenetre pop up)
 
+let btnMultiplication = document.getElementById("btnMultiplication");
+let btnClear = document.getElementById("clearMultiplication")
+let resultMultiplication = document.getElementById("resultMultiplication");
+
+btnMultiplication.addEventListener("click", () => {
+
+    resultMultiplication.innerHTML = "";
+    let nbMultiplicateur = document.getElementById("nbMultiplicateur").value;
+    let nb = Number(nbMultiplicateur);
+    nbMultiplicateur.innerHTML = "";
+    if (nbMultiplicateur == "") {
+        resultMultiplication.innerHTML = "<p>Tu dois rentrer un nombre</p>"
+    } else {
+        for (let i = 1; i <= 10; i++) {
+            let inner = `<p>${nb} x ${i} = ${nb * i}</p>`
+            resultMultiplication.innerHTML += inner;
+        }
+    }
+})
+
+btnClear.addEventListener("click", () => {
+    document.getElementById("nbMultiplicateur").value = "";
+    resultMultiplication.innerHTML = "";
+})
 
 // exercice 5 : crée une pyramide à 10 étages grace à une boucle
 
