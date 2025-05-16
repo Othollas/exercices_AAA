@@ -117,6 +117,26 @@ btnClear.addEventListener("click", () => {
 // exercice 5 : crée une pyramide à 10 étages grace à une boucle
 
 
+
+function pyramide(input) {
+const height = 10;
+for (let i = 1; i <= height; i++) {
+  let spaces = " ".repeat(height - i);
+  let symbole = input.repeat(2 * i - 1);
+  console.log(spaces + symbole);
+}
+}
+
+
+
+let btnPyramide = document.getElementById("btnPyramide");
+
+btnPyramide.addEventListener("click", () => {
+    let inputPyramide = document.getElementById("inputPyramide").value;
+
+    pyramide(inputPyramide);
+})
+
 // exercice 6 : crée une fonction qui prend 2 nombre en parametre et renvoie un tableau de multiple de num jusqu'a la longueur definie
 
 // exercice 7 : crée un tableau de fruits (par ex: fraise, melon, raisin). Puis 1/ supprimer raisin, 2/ ajouter "Mandarine" à la fin du tableau, 3/ supprimer melon, et 4/ ajouter orange au debut du tableau
