@@ -119,12 +119,28 @@ btnClear.addEventListener("click", () => {
 
 
 function pyramide(input) {
-const height = 10;
-for (let i = 1; i <= height; i++) {
-  let spaces = " ".repeat(height - i);
-  let symbole = input.repeat(2 * i - 1);
-  console.log(spaces + symbole);
-}
+    let resultPyramide = document.getElementById("resultPyramide");
+    let height = 10;
+    resultPyramide.innerHTML = "";
+    // for (let i = 1; i <= height; i++) {
+    //   let spaces = " ".repeat(height - i);
+    //   let symbole = input.repeat(2 * i - 1);
+    //   console.log(spaces + symbole);
+    // }
+
+    for (let i = 1; i <= height; i++) {
+        let line = "";
+        for (let u = 1; u <= height - i ; u++) {
+            line += "_";
+        }
+        for (let s = 1; s <= 2*i - 1; s++) {
+            line += input
+            
+        }
+        line += "<br>"
+        resultPyramide.innerHTML += line
+    }
+
 }
 
 
