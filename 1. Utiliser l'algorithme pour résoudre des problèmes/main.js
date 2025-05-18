@@ -130,12 +130,12 @@ function pyramide(input) {
 
     for (let i = 1; i <= height; i++) {
         let line = "";
-        for (let u = 1; u <= height - i ; u++) {
+        for (let u = 1; u <= height - i; u++) {
             line += "_";
         }
-        for (let s = 1; s <= 2*i - 1; s++) {
+        for (let s = 1; s <= 2 * i - 1; s++) {
             line += input
-            
+
         }
         line += "<br>"
         resultPyramide.innerHTML += line
@@ -154,5 +154,36 @@ btnPyramide.addEventListener("click", () => {
 })
 
 // exercice 6 : crée une fonction qui prend 2 nombre en parametre et renvoie un tableau de multiple de num jusqu'a la longueur definie
+
+const btnMultiply = document.getElementById("btnMultiply");
+let resultMultiply = document.getElementById("multiplyResult");
+let clearMultiply = document.getElementById("clearMultiply");
+
+
+
+
+function multiplyXlongueur(nb, long) {
+    let line = "";
+    for (let i = 1; i <= long; i++) {
+        line += `${nb} x ${i} = ${nb * i} <br>`
+    }
+    console.log(line)
+    resultMultiply.innerHTML = line;
+}
+
+btnMultiply.addEventListener("click", () => {
+    let number = document.getElementById("multiplicateur");
+    let longueur = document.getElementById("longueur");
+    number = Number(number.value);
+    longueur = Number(longueur.value);
+    multiplyXlongueur(number, longueur)
+    number.value = null;
+    longueur.value = "";
+
+})
+
+clearMultiply.addEventListener("click", () => {
+    resultMultiply.innerHTML = "";
+})
 
 // exercice 7 : crée un tableau de fruits (par ex: fraise, melon, raisin). Puis 1/ supprimer raisin, 2/ ajouter "Mandarine" à la fin du tableau, 3/ supprimer melon, et 4/ ajouter orange au debut du tableau
