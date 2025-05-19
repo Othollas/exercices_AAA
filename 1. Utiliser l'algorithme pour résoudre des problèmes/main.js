@@ -187,3 +187,63 @@ clearMultiply.addEventListener("click", () => {
 })
 
 // exercice 7 : crée un tableau de fruits (par ex: fraise, melon, raisin). Puis 1/ supprimer raisin, 2/ ajouter "Mandarine" à la fin du tableau, 3/ supprimer melon, et 4/ ajouter orange au debut du tableau
+
+
+
+const questions = ["Comment supprimer le raisin ?", "Comment ajouter Mandarine à la fin du tableau ?", "Comment supprimer le Melon ?", "Comment ajouter Orange au debut du tableau ?"]
+
+const question1 = {
+    question: "1. Comment supprimer le raisin ?",
+    responses : ["A. fruits.pop(raisin)", "B. fruits.splice(2, 1) ", "C. fruits.shift(raisin)", "D. fruits.remove(raisin)"],
+    answerIndex: 1
+}
+
+const question2 = {
+    question : "2. Comment ajouter Mandarine à la fin du tableau ?",
+    reponses : ["A. fruits.push(Mandarine)", "B. fruits.unshift(Mandarine)", "C. fruits.addLast(Mandarine)", "D. fruits.insert(3, Mandarine)"],
+    answerIndex: 0
+}
+
+const question3 = {
+    question : "3. Comment supprimer le Melon ?",
+    reponses : ["A. fruits.splice(1, 1)", "B. fruits.delete(Melon)", "C. fruits.pop()", "D. fruits.removeAt(1)"],
+    answerIndex: 0
+}
+
+const question4 = {
+    question : "4. Comment ajouter Orange au début du tableau ?",
+    reponses : ["A. fruits.unshift(Orange)", "B. fruits.pushAtStart(Orange)", "C. fruits.insert(0, Orange)", "D. fruits.prepend(Orange)"],
+    answerIndex: 0
+}
+
+
+    let question = document.getElementById("question");
+    let reponse = document.querySelectorAll("#reponse");
+    console.log(reponse);
+
+const EstBonneReponse = function(reponse, vraiReponse){
+    if(reponse === vraiReponse){
+        console.log("GAGNER")
+    }else{
+        console.group("perdu")
+    }
+}
+
+reponse.forEach(element => {
+    element.checked = false   
+});
+
+// for(let i= 1; i<=4; i++){   
+// }
+
+
+// let fruits = ["Fraise", "Melon", "Raisin"];
+// console.log(fruits);
+// fruits.pop();
+// console.log(fruits);
+// fruits.push("Mandarine");
+// console.log(fruits);
+// fruits.splice(1, 1);
+// console.log(fruits);
+// fruits.unshift("Orange");
+// console.log(fruits);

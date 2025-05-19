@@ -111,7 +111,7 @@
         <input type="text" id="inputPyramide" maxlength="1" pattern=".{1}" required>
         <button id="btnPyramide">Crée la pyramide</button>
         <div id="resultPyramide"></div>
-         <button id="clearPyramide">Clear</button>
+        <button id="clearPyramide">Clear</button>
     </section>
 
 
@@ -129,7 +129,7 @@
         <label for="longueur">Choisi la longeur de la multiplication</label>
         <input type="number" name="longueur" id="longueur" min="0">
         <button id="btnMultiply">Multiplier</button>
-        
+
         <div id="multiplyResult"></div>
         <button id="clearMultiply">Clear</button>
     </section>
@@ -142,6 +142,29 @@
                     aria-expanded="Afficher l'exercice">▶</span>
             </button>
         </h3>
+
+        <!-- Ici je vais realiser un qcm pour sur les arrays, à chaque question, 4 reponses possible et si la personne arrive à repondre alors elle passe à la question suivante. Tout d'abord en raw, puis je vais faire avec des animations ensuite.    -->
+
+        <div id="qcm">
+            <h3 id="question">Exemple ?</h3>
+            <div class="reponse1">
+                <label for="reponse1">Exemple</label>
+                <input type="radio" name="reponse" id="reponse" value="">
+            </div>
+            <div class="reponse2">
+                <label for="reponse2">Exemple</label>
+                <input type="radio" name="reponse" id="reponse" value="">
+            </div>
+            <div class="reponse3">
+                <label for="reponse3">Exemple</label>
+                <input type="radio" name="reponse" id="reponse" value="">
+            </div>
+            <div class="reponse4">
+                <label for="reponse4">Exemple</label>
+                <input type="radio" name="reponse" id="reponse" value="">
+            </div>
+        </div>
+
     </section>
 
 
