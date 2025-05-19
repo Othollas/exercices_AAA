@@ -188,53 +188,76 @@ clearMultiply.addEventListener("click", () => {
 
 // exercice 7 : crée un tableau de fruits (par ex: fraise, melon, raisin). Puis 1/ supprimer raisin, 2/ ajouter "Mandarine" à la fin du tableau, 3/ supprimer melon, et 4/ ajouter orange au debut du tableau
 
-
-
-const questions = ["Comment supprimer le raisin ?", "Comment ajouter Mandarine à la fin du tableau ?", "Comment supprimer le Melon ?", "Comment ajouter Orange au debut du tableau ?"]
-
-const question1 = {
-    question: "1. Comment supprimer le raisin ?",
-    responses : ["A. fruits.pop(raisin)", "B. fruits.splice(2, 1) ", "C. fruits.shift(raisin)", "D. fruits.remove(raisin)"],
-    answerIndex: 1
-}
-
-const question2 = {
-    question : "2. Comment ajouter Mandarine à la fin du tableau ?",
-    reponses : ["A. fruits.push(Mandarine)", "B. fruits.unshift(Mandarine)", "C. fruits.addLast(Mandarine)", "D. fruits.insert(3, Mandarine)"],
-    answerIndex: 0
-}
-
-const question3 = {
-    question : "3. Comment supprimer le Melon ?",
-    reponses : ["A. fruits.splice(1, 1)", "B. fruits.delete(Melon)", "C. fruits.pop()", "D. fruits.removeAt(1)"],
-    answerIndex: 0
-}
-
-const question4 = {
-    question : "4. Comment ajouter Orange au début du tableau ?",
-    reponses : ["A. fruits.unshift(Orange)", "B. fruits.pushAtStart(Orange)", "C. fruits.insert(0, Orange)", "D. fruits.prepend(Orange)"],
-    answerIndex: 0
-}
-
-
-    let question = document.getElementById("question");
-    let reponse = document.querySelectorAll("#reponse");
-    console.log(reponse);
-
-const EstBonneReponse = function(reponse, vraiReponse){
-    if(reponse === vraiReponse){
-        console.log("GAGNER")
-    }else{
-        console.group("perdu")
+const questions = [
+    {
+        question: "1. Comment supprimer le raisin ?",
+        reponses: ["A. fruits.pop(raisin)", "B. fruits.splice(2, 1) ", "C. fruits.shift(raisin)", "D. fruits.remove(raisin)"],
+        answerTrueIndex: 1
+    },
+    {
+        question: "2. Comment ajouter Mandarine à la fin du tableau ?",
+        reponses: ["A. fruits.push(Mandarine)", "B. fruits.unshift(Mandarine)", "C. fruits.addLast(Mandarine)", "D. fruits.insert(3, Mandarine)"],
+        answerTrueIndex: 0
+    },
+    {
+        question: "3. Comment supprimer le Melon ?",
+        reponses: ["A. fruits.splice(1, 1)", "B. fruits.delete(Melon)", "C. fruits.pop()", "D. fruits.removeAt(1)"],
+        answerTrueIndex: 0
+    },
+    {
+        question: "4. Comment ajouter Orange au début du tableau ?",
+        reponses: ["A. fruits.unshift(Orange)", "B. fruits.pushAtStart(Orange)", "C. fruits.insert(0, Orange)", "D. fruits.prepend(Orange)"],
+        answerTrueIndex: 0
     }
-}
+]
 
-reponse.forEach(element => {
-    element.checked = false   
+
+
+let containerQuestion = document.getElementById("question");
+let reponse = document.querySelectorAll(".reponse");
+let label = document.querySelectorAll(".label");
+let btnReponse = document.getElementById("btnReponse");
+let currentQuestionIndex = 0;
+
+if (currentQuestionIndex === 0) afficherQuestion(currentQuestionIndex)
+
+const EstBonneReponse = function (reponse, vraiReponse) {
+    if (reponse == vraiReponse) {
+        console.log("GAGNER");
+        if(currentQuestionIndex < questions.length - 1) {
+            currentQuestionIndex++;
+            afficherQuestion(currentQuestionIndex)
+        }else{
+            console.log("fin de partie")
+        }
+    } else {
+        console.log("PERDU");
+    };
+};
+const resetReponse = () => reponse.forEach(element => {
+    element.checked = false;
 });
 
-// for(let i= 1; i<=4; i++){   
-// }
+
+function afficherQuestion(index) {
+    containerQuestion.innerHTML = questions[index].question;
+    for (let i = 0; i < 4; i++) {
+        reponse[i].value = i;
+        label[i].innerHTML = questions[index].reponses[i];
+    };
+};
+
+btnReponse.addEventListener("click", () => {
+    let userResponse = "";
+    reponse.forEach(element => {
+        if (element.checked == true) {
+            userResponse = element.value;
+        }
+    });
+    console.log(userResponse)
+    console.log(questions[currentQuestionIndex].answerTrueIndex)
+    EstBonneReponse(userResponse, questions[currentQuestionIndex].answerTrueIndex)
+});
 
 
 // let fruits = ["Fraise", "Melon", "Raisin"];
