@@ -9,63 +9,77 @@
 </head>
 
 <body>
-    <header></header>
+    <header>
+
+        <ul>
+            <li>1er </li>
+            <li>2eme</li>
+            <li>3eme</li>
+            <li>4eme</li>
+        </ul>
+    </header>
 
     <!-- Je dois modifier la structure de l'exercice, je vais finalement crée l'exercice, pour inserer un codepen ou un tableau pour tester le code, puis je vais mettre des indices et enfin je vais mettre le  resultat mais caché.  -->
 
-    <section>
         <h1>Exercices</h1>
+
+    <section>
+
         <div id="minor_or_major" id="minor_or_major">
-            <h3>Etre mineur ou majeur
-                <button>
+            <h3>Etre mineur ou majeur<br>
+                <button class="btnHidden" data-target="1">
                     <span>Afficher l'exercice</span>
-                    <span class="icone" aria-label="fleche, afficher l'exercice"
-                        aria-expanded="Afficher l'exercice">▶</span>
+                    <span class="icone" data-target="1" aria-label="fleche, afficher l'exercice"
+                        aria-expanded="Afficher l'exercice 1">▶</span>
                 </button>
             </h3>
-            <form>
-                <div class="hidden">
-                    <label for="age">Quel est ton age ?</label>
-                    <input type="number" name="age" id="input_age" min="1" max="120">
-                    <button type="submit" class="ageSubmit">envoyer</button>
-                    <nav class="hidden">entrer votre age</nav>
-                    <p class="minor hidden">Tu es mineur</p>
-                    <p class="major hidden">Tu es majeur</p>
-                </div>
-            </form>
+
+            <div class="hidden" data-target="1">
+                <label for="age">Quel est ton age ?</label>
+                <input type="number" name="age" id="input_age" min="1" max="120">
+                <button type="submit" class="ageSubmit">envoyer</button>
+                <nav class="hidden">entrer votre age</nav>
+                <p class="minor hidden">Tu es mineur</p>
+                <p class="major hidden">Tu es majeur</p>
+            </div>
+
         </div>
     </section>
 
     <section>
-        <h3>Trouve le nombre
-            <button>
+        <h3>Trouve le nombre<br>
+            <button class="btnHidden" data-target="2">
                 <span>Afficher l'exercice</span>
                 <span class="icone" aria-label="fleche, afficher l'exercice"
-                    aria-expanded="Afficher l'exercice">▶</span>
+                    aria-expanded="Afficher l'exercice 2">▶</span>
             </button>
         </h3>
 
-        <label for="chiffre_utilisateur">tape un nombre entre 1 et 100</label>
-        <input type="nombre" name="chiffre_utilisateur" id="chiffre_utilisateur">
-        <button id="jouer">jouer</button>
-        <nav class="vie_restante">Essai restant : 3</nav>
-        <nav class="hidden" id="bas">Ton chiffre est trop bas.</nav>
-        <nav class="hidden" id="haut">Ton chiffre est trop haut.</nav>
-        <nav class="hidden" id="succes">Bravo Tu as bien deviner !! </nav>
-        <nav class="hidden" id="perdu">Désoler tu as perdu, mais tu peux retenter ta chance</nav>
-        <button class="hidden" id="rejouer">rejouer</button>
+        <div class="hidden" data-target="2">
+            <label for="chiffre_utilisateur">tape un nombre entre 1 et 100</label>
+            <input type="nombre" name="chiffre_utilisateur" id="chiffre_utilisateur">
+            <button id="jouer">jouer</button>
+            <nav class="vie_restante">Essai restant : 3</nav>
+            <nav class="hidden" id="bas">Ton chiffre est trop bas.</nav>
+            <nav class="hidden" id="haut">Ton chiffre est trop haut.</nav>
+            <nav class="hidden" id="succes">Bravo Tu as bien deviner !! </nav>
+            <nav class="hidden" id="perdu">Désoler tu as perdu, mais tu peux retenter ta chance</nav>
+            <button class="hidden" id="rejouer">rejouer</button>
+        </div>
+
     </section>
 
     <section>
-        Exercice 3 : crée une fonction pour vérifier si la personne peut s'incrire à la bibliotheque de Bordeaux.
-        <h3>Puis je m'inscrire ?
-            <button>
+        <h3>Puis je m'inscrire ?<br>
+            <button class="btnHidden" data-target="3">
                 <span>Afficher l'exercice</span>
                 <span class="icone" aria-label="fleche, afficher l'exercice"
-                    aria-expanded="Afficher l'exercice">▶</span>
+                    aria-expanded="Afficher l'exercice 3">▶</span>
             </button>
         </h3>
-        <form action="">
+
+
+        <div class="hidden" data-target="3">
             <label for="plus_que_18">As tu plus de 18 ans ?</label>
             <select name="plus_que_18" id="plus_que_18">
                 <option value=""></option>
@@ -80,73 +94,83 @@
                 <option value="non">non</option>
             </select>
             <button id="bouton_inscription">Envoyer</button>
-        </form>
+        </div>
     </section>
 
     <section>
-        <h3>Crée une table de multiplication.
-            <button>
+        <h3>Crée une table de multiplication.<br>
+            <button class="btnHidden" data-target="4">
                 <span>Afficher l'exercice</span>
-                <span class="icone" aria-label="fleche, afficher l'exercice"
-                    aria-expanded="Afficher l'exercice">▶</span>
-            </button>
-        </h3>
-        <label for="nbMultiplicateur">Entre un chiffre</label>
-        <input type="number" id="nbMultiplicateur">
-        <button id="btnMultiplication">Multiplie</button>
-        <div id="resultMultiplication"></div>
-        <button id="clearMultiplication">Clear</button>
-    </section>
-
-    <section>
-        <h3>Crée une pyramide.
-            <button>
-                <span>Afficher l'exercice</span>
-                <span class="icone" aria-label="fleche, afficher l'exercice"
+                <span class="icone" aria-label="fleche, afficher l'exercice 4"
                     aria-expanded="Afficher l'exercice">▶</span>
             </button>
         </h3>
 
-        <label for="inputPyramide"></label>
-        <input type="text" id="inputPyramide" maxlength="1" pattern=".{1}" required>
-        <button id="btnPyramide">Crée la pyramide</button>
-        <div id="resultPyramide"></div>
-        <button id="clearPyramide">Clear</button>
+        <div class="hidden" data-target="4">
+            <label for="nbMultiplicateur">Entre un chiffre</label>
+            <input type="number" id="nbMultiplicateur">
+            <button id="btnMultiplication">Multiplie</button>
+            <div id="resultMultiplication"></div>
+            <button id="clearMultiplication">Clear</button>
+        </div>
+
     </section>
 
-
     <section>
-        <h3>Fonction de multiplication à longueur variable.
-            <button>
+        <h3>Crée une pyramide.<br>
+            <button class="btnHidden" data-target="5">
                 <span>Afficher l'exercice</span>
-                <span class="icone" aria-label="fleche, afficher l'exercice"
+                <span class="icone" aria-label="fleche, afficher l'exercice 5"
                     aria-expanded="Afficher l'exercice">▶</span>
             </button>
         </h3>
 
-        <label for="multiplicateur">Choisi le multiplicateur.</label>
-        <input type="number" name="multiplicateur" id="multiplicateur">
-        <label for="longueur">Choisi la longeur de la multiplication</label>
-        <input type="number" name="longueur" id="longueur" min="0">
-        <button id="btnMultiply">Multiplier</button>
-
-        <div id="multiplyResult"></div>
-        <button id="clearMultiply">Clear</button>
+        <div class="hidden" data-target="5">
+            <label for="inputPyramide"></label>
+            <input type="text" id="inputPyramide" maxlength="1" pattern=".{1}" required>
+            <button id="btnPyramide">Crée la pyramide</button>
+            <div id="resultPyramide"></div>
+            <button id="clearPyramide">Clear</button>
+        </div>
     </section>
 
+
     <section>
-        <h3>Manipuler les tableaux
-            <button>
+        <h3>Fonction de multiplication à longueur variable.<br>
+            <button class="btnHidden" data-target="6">
                 <span>Afficher l'exercice</span>
-                <span class="icone" aria-label="fleche, afficher l'exercice"
+                <span class="icone" aria-label="fleche, afficher l'exercice 6"
+                    aria-expanded="Afficher l'exercice">▶</span>
+            </button>
+        </h3>
+
+        <div class="hidden" data-target="6">
+            <label for="multiplicateur">Choisi le multiplicateur.</label>
+            <input type="number" name="multiplicateur" id="multiplicateur">
+            <label for="longueur">Choisi la longeur de la multiplication</label>
+            <input type="number" name="longueur" id="longueur" min="0">
+            <button id="btnMultiply">Multiplier</button>
+
+            <div id="multiplyResult"></div>
+            <button id="clearMultiply">Clear</button>
+        </div>
+    </section>
+
+    
+    <section>
+        <h3>Manipuler les tableaux<br>
+               <button class="btnHidden" data-target="7">
+                <span>Afficher l'exercice</span>
+                <span class="icone" aria-label="fleche, afficher l'exercice 7"
                     aria-expanded="Afficher l'exercice">▶</span>
             </button>
         </h3>
 
         <!-- Ici je vais realiser un qcm pour sur les arrays, à chaque question, 4 reponses possible et si la personne arrive à repondre alors elle passe à la question suivante. Tout d'abord en raw, puis je vais faire avec des animations ensuite.    -->
 
-        <div id="qcm">
-            <h3 id="question">Exemple ?</h3>
+
+        <div id="qcm" class="hidden" data-target="7">
+            <h4 id="question">Exemple ?</h4>
             <div class="containerReponse">
                 <label for="reponse1" class="label">Exemple</label>
                 <input type="radio" name="reponse" class="reponse" id="reponse1" value="">

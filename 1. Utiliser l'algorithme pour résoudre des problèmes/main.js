@@ -1,10 +1,24 @@
-let icone = document.querySelector(".icone");
-let form = document.querySelector(".hidden");
+let hidden = document.querySelectorAll(".btnHidden");
+let containerHidden = document.querySelectorAll(".hidden");
 let butonSubmit = document.querySelector(".ageSubmit");
+console.log(hidden)
 
-icone.addEventListener("click", () => {
-    form.classList.toggle("hidden");
-})
+hidden.forEach(bouton => bouton.addEventListener("click", () => {
+    let nbtarget = bouton.dataset.target;
+    containerHidden.forEach(container => {
+        container.classList.add("hidden");
+        if(container.dataset.target == nbtarget){
+            container.classList.remove("hidden")
+        }
+    });
+
+
+    // form.classList.toggle("hidden");
+}))
+
+// hidden.addEventListener("click", () => {
+
+// })
 
 butonSubmit.addEventListener("click", (e) => {
     e.preventDefault();
@@ -23,6 +37,8 @@ butonSubmit.addEventListener("click", (e) => {
         setInterval(() => age_minor.classList.add("hidden"), 1000);
     }
 })
+
+// -----------------------------------------------------
 
 // exercice 2 
 
@@ -224,10 +240,10 @@ if (currentQuestionIndex === 0) afficherQuestion(currentQuestionIndex)
 const EstBonneReponse = function (reponse, vraiReponse) {
     if (reponse == vraiReponse) {
         console.log("GAGNER");
-        if(currentQuestionIndex < questions.length - 1) {
+        if (currentQuestionIndex < questions.length - 1) {
             currentQuestionIndex++;
             afficherQuestion(currentQuestionIndex)
-        }else{
+        } else {
             console.log("fin de partie")
         }
     } else {
