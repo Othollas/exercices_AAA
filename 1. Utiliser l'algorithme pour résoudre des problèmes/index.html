@@ -12,10 +12,11 @@
     <header>
 
         <ul>
-            <li>1er </li>
-            <li>2eme</li>
-            <li>3eme</li>
-            <li>4eme</li>
+            <li>0. <a href="">Les bases</a></li>
+            <li>1. <a href="">Utiliser l'algorithme pour résoudre des problèmes</a></li>
+            <li>2. <a href="">Utiliser le DOM</a></li>
+            <li>3. <a href="">Gerer les formulaire</a></li>
+            <li>4. <a href="">Introduction à la POO</a></li>
         </ul>
     </header>
 
@@ -34,7 +35,7 @@
                 </button>
             </h3>
 
-            <div class="hidden" data-target="1">
+            <div class="hidden exercice" data-target="1">
                 <label for="age">Quel est ton age ?</label>
                 <input type="number" name="age" id="input_age" min="1" max="120">
                 <button type="submit" class="ageSubmit">envoyer</button>
@@ -55,7 +56,7 @@
             </button>
         </h3>
 
-        <div class="hidden" data-target="2">
+        <div class="hidden exercice" data-target="2">
             <label for="chiffre_utilisateur">tape un nombre entre 1 et 100</label>
             <input type="nombre" name="chiffre_utilisateur" id="chiffre_utilisateur">
             <button id="jouer">jouer</button>
@@ -79,7 +80,7 @@
         </h3>
 
 
-        <div class="hidden" data-target="3">
+        <div class="hidden exercice" data-target="3">
             <label for="plus_que_18">As tu plus de 18 ans ?</label>
             <select name="plus_que_18" id="plus_que_18">
                 <option value=""></option>
@@ -106,7 +107,7 @@
             </button>
         </h3>
 
-        <div class="hidden" data-target="4">
+        <div class="hidden exercice" data-target="4">
             <label for="nbMultiplicateur">Entre un chiffre</label>
             <input type="number" id="nbMultiplicateur">
             <button id="btnMultiplication">Multiplie</button>
@@ -125,7 +126,7 @@
             </button>
         </h3>
 
-        <div class="hidden" data-target="5">
+        <div class="hidden exercice" data-target="5">
             <label for="inputPyramide"></label>
             <input type="text" id="inputPyramide" maxlength="1" pattern=".{1}" required>
             <button id="btnPyramide">Crée la pyramide</button>
@@ -144,7 +145,7 @@
             </button>
         </h3>
 
-        <div class="hidden" data-target="6">
+        <div class="hidden exercice" data-target="6">
             <label for="multiplicateur">Choisi le multiplicateur.</label>
             <input type="number" name="multiplicateur" id="multiplicateur">
             <label for="longueur">Choisi la longeur de la multiplication</label>
@@ -169,7 +170,7 @@
         <!-- Ici je vais realiser un qcm pour sur les arrays, à chaque question, 4 reponses possible et si la personne arrive à repondre alors elle passe à la question suivante. Tout d'abord en raw, puis je vais faire avec des animations ensuite.    -->
 
 
-        <div id="qcm" class="hidden" data-target="7">
+        <div id="qcm" class="hidden exercice" data-target="7">
             <h4 id="question">Exemple ?</h4>
             <div class="containerReponse">
                 <label for="reponse1" class="label">Exemple</label>

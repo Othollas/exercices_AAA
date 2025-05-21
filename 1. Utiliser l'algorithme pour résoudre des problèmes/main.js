@@ -1,24 +1,17 @@
-let hidden = document.querySelectorAll(".btnHidden");
+let btnHidden = document.querySelectorAll(".btnHidden");
 let containerHidden = document.querySelectorAll(".hidden");
 let butonSubmit = document.querySelector(".ageSubmit");
-console.log(hidden)
 
-hidden.forEach(bouton => bouton.addEventListener("click", () => {
+btnHidden.forEach(bouton => bouton.addEventListener("click", () => {
     let nbtarget = bouton.dataset.target;
     containerHidden.forEach(container => {
-        container.classList.add("hidden");
+        // container.classList.add("hidden"); // Permet de fermer tout les onglets avant d'ouvrir l'onglet choisi, probleme, l'onglet ne peut plus se fermer.
         if(container.dataset.target == nbtarget){
-            container.classList.remove("hidden")
+            container.classList.toggle("hidden")
         }
     });
-
-
-    // form.classList.toggle("hidden");
 }))
 
-// hidden.addEventListener("click", () => {
-
-// })
 
 butonSubmit.addEventListener("click", (e) => {
     e.preventDefault();

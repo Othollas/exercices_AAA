@@ -1,3 +1,5 @@
+/* Mettre les polices dans un fichier css à part, fractionner les logiques css */
+
 .hidden {
     display: none;
 }
@@ -20,3 +22,57 @@ button.clean:focus {
 }
 
 select{display: block;}
+
+header{
+    ul{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        li{
+            list-style: none;
+        }
+    }
+}
+
+
+
+section{
+
+  position: relative;
+  padding-bottom: 6px; /* espace pour la “bordure” */
+/*   
+  background: linear-gradient(270deg, red, blue, green, red);
+  background-size: 600% 100%;
+  animation: gradientMove 5s linear infinite; */
+    h3{
+        text-align: center;
+    }
+    button{
+        margin-top: 2rem;
+        align-items: start;
+    }
+    .exercice{
+        margin-bottom: 2rem;
+    }
+}
+
+/* Application d'une box virtuelle du l'elment section pour la bordure animée */
+section::after{
+      content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 4px; /* épaisseur de la bordure */
+  background: linear-gradient(270deg, red, blue, green, red);
+  background-size: 600% 100%;
+  animation: gradientMove 5s linear infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
