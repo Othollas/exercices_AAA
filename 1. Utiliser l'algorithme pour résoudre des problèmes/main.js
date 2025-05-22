@@ -13,6 +13,7 @@ btnHidden.forEach(bouton => bouton.addEventListener("click", () => {
 }))
 
 
+
 butonSubmit.addEventListener("click", (e) => {
     e.preventDefault();
     let age_major = document.querySelector(".major");

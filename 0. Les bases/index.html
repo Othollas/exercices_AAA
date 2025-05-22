@@ -1,55 +1,68 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>utilisation du DOM</title>
+  <meta charset="UTF-8">
+  <title>HTML pour les Héros du Clavier</title>
 </head>
 <body>
-    
-<section>
-        <h3>Créer une liste dynamiquement
-            <button>
-                <span>Afficher l'exercice</span>
-                <span class="icone" aria-label="fleche, afficher l'exercice"
-                    aria-expanded="Afficher l'exercice">▶</span>
-            </button>
-        </h3>
-        
-    </section>
+  <header>
+    <h1>HTML pour les Héros du Clavier (Niveau : Gobelin Débutant)</h1>
+    <p><em>Une quête épique pour apprendre à créer des pages web, une balise à la fois.</em></p>
+  </header>
 
-<section>
-        <h3>Créer un incrementeur et un decrementeur
-            <button>
-                <span>Afficher l'exercice</span>
-                <span class="icone" aria-label="fleche, afficher l'exercice"
-                    aria-expanded="Afficher l'exercice">▶</span>
-            </button>
-        </h3>
-        
+  <main>
+    <section>
+      <h2>Qu’est-ce que le HTML ?</h2>
+      <p>
+        HTML (HyperText Markup Language) est le langage des pages web. 
+        C’est lui qui dit au navigateur : “Voici un titre ! Voici un paragraphe ! Et tiens, voilà une image de chat, parce qu’Internet.”<br><br>
+        Imagine que ton navigateur est un cuisinier, et HTML, la recette. Tu donnes les instructions, il prépare la page.
+      </p>
     </section>
 
     <section>
-        <h3>Afficher ou cacher l'image grace au DOM
-            <button>
-                <span>Afficher l'exercice</span>
-                <span class="icone" aria-label="fleche, afficher l'exercice"
-                    aria-expanded="Afficher l'exercice">▶</span>
-            </button>
-        </h3>
-        
+      <h2>À quoi ça ressemble ?</h2>
+      <p>Voici une page HTML minimale :</p>
+      <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Ma première page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Bonjour, monde cruel !&lt;/h1&gt;
+    &lt;p&gt;Je suis une balise &lt;strong&gt;HTML&lt;/strong&gt;. Peur de rien.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+      </pre>
+      <p>
+        Oui, les chevrons `&lt;` et `&gt;` ne sont pas là pour faire joli. Ils ouvrent et ferment les <strong>balises</strong>, les ingrédients secrets du HTML.
+      </p>
     </section>
 
     <section>
-        <h3>création d'un chronometre
-            <button>
-                <span>Afficher l'exercice</span>
-                <span class="icone" aria-label="fleche, afficher l'exercice"
-                    aria-expanded="Afficher l'exercice">▶</span>
-            </button>
-        </h3>
-        
+      <h2>Les balises les plus courantes</h2>
+      <ul>
+        <li><code>&lt;html&gt;</code> : Le château. Contient toute la page.</li>
+        <li><code>&lt;head&gt;</code> : Le cerveau. Des infos sur la page (invisibles).</li>
+        <li><code>&lt;body&gt;</code> : Le corps. Tout ce que l’utilisateur voit.</li>
+        <li><code>&lt;h1&gt;</code> à <code>&lt;h6&gt;</code> : Les titres, du plus important au moins sérieux.</li>
+        <li><code>&lt;p&gt;</code> : Un paragraphe. Pour parler, beaucoup parler.</li>
+        <li><code>&lt;strong&gt;</code> : Pour insister. Sérieusement. Comme ça.</li>
+        <li><code>&lt;em&gt;</code> : Pour faire genre... <em>“C’est important, mais un peu subtil.”</em></li>
+      </ul>
     </section>
 
+    <section>
+      <h2>À toi de jouer !</h2>
+      <p>Crée un fichier <code>index.html</code> sur ton ordinateur. Copie le code ci-dessus. Ouvre-le dans ton navigateur. Tadaaa ! Tu viens de créer une page web.</p>
+      <p>Ajoute des titres, des paragraphes, écris une blague, fais-toi plaisir. Le HTML ne mord pas. (Sauf si tu oublies de fermer une balise. Là, il boude.)</p>
+    </section>
+  </main>
+
+  <footer>
+    <hr>
+    <p>© 2025 - L’Ordre du Baliseur Fou. N’hésitez pas à sacrifier un <code>&lt;br&gt;</code> pour invoquer une ligne vide.</p>
+  </footer>
 </body>
 </html>
