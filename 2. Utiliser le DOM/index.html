@@ -1,43 +1,61 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>utilisation du DOM</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    
-<section>
-        <h3>Créer une liste dynamiquement
-            <button>
-                <span>Afficher l'exercice</span>
-                <span class="icone" aria-label="fleche, afficher l'exercice"
-                    aria-expanded="Afficher l'exercice">▶</span>
-            </button>
-        </h3>
-        
-    </section>
 
-<section>
-        <h3>Créer un incrementeur et un decrementeur
-            <button>
-                <span>Afficher l'exercice</span>
-                <span class="icone" aria-label="fleche, afficher l'exercice"
-                    aria-expanded="Afficher l'exercice">▶</span>
-            </button>
-        </h3>
-        
+<body>
+
+    <section>
+        <h3>Créer une liste dynamiquement</h3>
+        <button>
+            <span>Afficher l'exercice</span>
+            <span class="icone" aria-label="fleche, afficher l'exercice" aria-expanded="Afficher l'exercice">▶</span>
+        </button>
+
+
+
+        <div id="exercice1" class="exercice  hidden" data-target="1">
+            <ul class="ulContainer">
+
+            </ul>
+        </div>
+
     </section>
 
     <section>
-        <h3>Afficher ou cacher l'image grace au DOM
+        <h3>Créer un incrementeur et un decrementeur</h3>
+        <button>
+            <span>Afficher l'exercice</span>
+            <span class="icone" aria-label="fleche, afficher l'exercice" aria-expanded="Afficher l'exercice">▶</span>
+        </button>
+
+        
+        <div id="compteurContainer">
+
+            <button class="moins">-</button>
+            <span class="compteur"></span>
+            <button class="plus">+</button>
+
+
+        </div>
+
+    </section>
+
+    <section>
+        <h3>Afficher ou cacher l'image grace au DOM </h3>
             <button>
                 <span>Afficher l'exercice</span>
                 <span class="icone" aria-label="fleche, afficher l'exercice"
                     aria-expanded="Afficher l'exercice">▶</span>
             </button>
-        </h3>
-        
+       
+
+
     </section>
 
     <section>
@@ -48,8 +66,10 @@
                     aria-expanded="Afficher l'exercice">▶</span>
             </button>
         </h3>
-        
+
     </section>
 
 </body>
+<script src="main.js"></script>
+
 </html>
