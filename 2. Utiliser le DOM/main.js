@@ -29,3 +29,53 @@ boutonMoins.addEventListener("click", () => {
     console.log(compteur);
     span.innerHTML = compteur;
 })
+
+// Exercice 3
+
+let imgKuroTora = document.querySelector(".imgKuroTora");
+let butonHide = document.querySelector(".btnHide");
+console.log(imgKuroTora.classList.contains("hidden"));
+
+butonHide.addEventListener("click", ()=>{
+    imgKuroTora.classList.toggle("hidden");
+    if(imgKuroTora.classList.contains("hidden")){
+        butonHide.textContent = "Montrer l'image";
+    }else{
+        butonHide.textContent = "Cacher l'image"
+    }
+})
+
+// Exercice 4
+let chronoSpan = document.querySelector(".chrono");
+let chrono = 0;
+chronoSpan.innerHTML = chrono;
+let startPause = document.querySelector(".startPause");
+let reset = document.querySelector(".reset");
+let run = false;
+
+startPause.addEventListener("click", ()=>{
+    if(run == false){
+        run = true;
+        startPause.textContent = "Pause";
+         id =  setInterval(()=>{
+            
+        chrono++;
+        
+        chronoSpan.innerHTML = chrono
+    }), 1}else{
+        startPause.textContent = "Start";
+        run = false
+        clearInterval(id)
+    }
+    
+console.log(run)
+})
+
+reset.addEventListener("click", ()=>{
+    clearInterval(id);
+    run = false;
+    startPause.textContent = "Start"
+    chrono = 0;
+    chronoSpan.textContent = chrono;
+    
+})

@@ -34,8 +34,8 @@
             <span class="icone" aria-label="fleche, afficher l'exercice" aria-expanded="Afficher l'exercice">▶</span>
         </button>
 
-        
-        <div id="compteurContainer">
+
+        <div id="compteurContainer" class="hidden">
 
             <button class="moins">-</button>
             <span class="compteur"></span>
@@ -47,25 +47,33 @@
     </section>
 
     <section>
-        <h3>Afficher ou cacher l'image grace au DOM </h3>
-            <button>
-                <span>Afficher l'exercice</span>
-                <span class="icone" aria-label="fleche, afficher l'exercice"
-                    aria-expanded="Afficher l'exercice">▶</span>
-            </button>
-       
+        <h3>Afficher ou cacher l'image grace au DOM</h3>
+        <button>
+            <span>Afficher l'exercice</span>
+            <span class="icone" aria-label="fleche, afficher l'exercice" aria-expanded="Afficher l'exercice">▶</span>
+        </button>
 
+        <div class="image hidden">
+            <img class="imgKuroTora hidden" src="./tora kuro mignon.png" alt="image chats mignon mais insistant">
+            <div>
+                <button class="btnHide">Montrer L'image</button>
+            </div>
+        </div>
 
     </section>
 
     <section>
-        <h3>création d'un chronometre
-            <button>
-                <span>Afficher l'exercice</span>
-                <span class="icone" aria-label="fleche, afficher l'exercice"
-                    aria-expanded="Afficher l'exercice">▶</span>
-            </button>
-        </h3>
+        <h3>création d'un chronometre</h3>
+        <button>
+            <span>Afficher l'exercice</span>
+            <span class="icone" aria-label="fleche, afficher l'exercice" aria-expanded="Afficher l'exercice">▶</span>
+        </button>
+
+        <div id="chrono" class="hidden">
+            <button class="startPause">start/pause</button>
+            <button class="reset">Reset</button>
+            <span class="chrono"></span>
+        </div>
 
     </section>
 
