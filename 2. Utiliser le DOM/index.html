@@ -12,14 +12,14 @@
 
     <section>
         <h3>Créer une liste dynamiquement</h3>
-        <button>
+        <button class="btnHidden"  data-target="1">
             <span>Afficher l'exercice</span>
-            <span class="icone" aria-label="fleche, afficher l'exercice" aria-expanded="Afficher l'exercice">▶</span>
+            <span class="icone" aria-label="fleche, afficher l'exercice" aria-expanded="Afficher l'exercice" data-target="1">▶</span>
         </button>
 
 
 
-        <div id="exercice1" class="exercice  hidden" data-target="1">
+        <div id="exercice1" class="exercice hidden" data-target="1">
             <ul class="ulContainer">
 
             </ul>
@@ -29,13 +29,13 @@
 
     <section>
         <h3>Créer un incrementeur et un decrementeur</h3>
-        <button>
+        <button class="btnHidden"  data-target="2">
             <span>Afficher l'exercice</span>
             <span class="icone" aria-label="fleche, afficher l'exercice" aria-expanded="Afficher l'exercice">▶</span>
         </button>
 
 
-        <div id="compteurContainer" class="hidden">
+        <div id="compteurContainer" class="hidden"  data-target="2">
 
             <button class="moins">-</button>
             <span class="compteur"></span>
@@ -48,12 +48,12 @@
 
     <section>
         <h3>Afficher ou cacher l'image grace au DOM</h3>
-        <button>
+        <button class="btnHidden"  data-target="3">
             <span>Afficher l'exercice</span>
             <span class="icone" aria-label="fleche, afficher l'exercice" aria-expanded="Afficher l'exercice">▶</span>
         </button>
 
-        <div class="image hidden">
+        <div class="image hidden" data-target="3">
             <img class="imgKuroTora hidden" src="./tora kuro mignon.png" alt="image chats mignon mais insistant">
             <div>
                 <button class="btnHide">Montrer L'image</button>
@@ -64,12 +64,12 @@
 
     <section>
         <h3>création d'un chronometre</h3>
-        <button>
+        <button class="btnHidden"  data-target="4">
             <span>Afficher l'exercice</span>
             <span class="icone" aria-label="fleche, afficher l'exercice" aria-expanded="Afficher l'exercice">▶</span>
         </button>
 
-        <div id="chrono" class="hidden">
+        <div id="chrono" class="hidden"  data-target="4">
             <button class="startPause">start/pause</button>
             <button class="reset">Reset</button>
             <span class="chrono"></span>

@@ -1,3 +1,15 @@
+let btnHidden = document.querySelectorAll(".btnHidden");
+console.log(btnHidden)
+let containerHidden = document.querySelectorAll(".hidden");
+btnHidden.forEach(bouton => bouton.addEventListener("click", () => {
+    let nbtarget = bouton.dataset.target;
+    console.log(nbtarget)
+    containerHidden.forEach(container => {
+        if(container.dataset.target == nbtarget){
+            container.classList.toggle("hidden")
+        }
+    });
+}))
 // exercice 1
 
 let formUser = document.getElementById("fromUser");
@@ -7,9 +19,6 @@ let text = document.querySelector(".informationUser");
 btnSubmit.addEventListener("click", (e => {
     e.preventDefault();
     text.textContent = "";
-    console.log(document.forms[0].age.value)
-    console.log(document.forms[0].name.value)
-    console.log(document.forms[0].surname.value)
     let name = document.forms[0].surname.value;
     let surname = document.forms[0].name.value;
     let age = document.forms[0].age.value;
@@ -39,9 +48,6 @@ let loginFalse = `<form action="" method="" id="formLogin">
 localStorage.getItem("loginNickname") ? isLog = true : isLog = false;
 
 isLog === true ? isConnected() : loginContainer.innerHTML = loginFalse;;
-
-
-
 
 
 

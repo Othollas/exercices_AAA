@@ -1,3 +1,17 @@
+let btnHidden = document.querySelectorAll(".btnHidden");
+
+let containerHidden = document.querySelectorAll(".hidden");
+console.log(containerHidden)
+btnHidden.forEach(bouton => bouton.addEventListener("click", () => {
+    let nbtarget = bouton.dataset.target;
+    containerHidden.forEach(container => {
+        if(container.dataset.target == nbtarget){
+            container.classList.toggle("hidden")
+        }
+    });
+}))
+
+
 // exercice 1
 
 let exercice1Container = document.getElementById("exercice1");
