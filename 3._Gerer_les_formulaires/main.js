@@ -68,3 +68,33 @@ function isNotConnected() {
         console.log(localStorage.getItem("loginNickname"))
     })
 }
+
+async function hashSHA256(text) {
+  const encoder = new TextEncoder();
+  const data = encoder.encode(text.trim());
+  const hashBuffer = await crypto.subtle.digest("SHA-256", data);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+async function comparePassword(input, storedHash) {
+  const inputHash = await hashSHA256(input);
+  return inputHash === storedHash;
+}
+
+
+// exercice 3
+
+let non = document.getElementById("non");
+let oui = document.getElementById("oui");
+let nomDateEntreprise = document.getElementById("nomDateEntreprise");
+
+non.addEventListener("change", ()=>{
+    if(non.checked === true){
+        nomDateEntreprise.classList.add("hidden");
+    }
+})
+
+oui.addEventListener("change", ()=>{
+     nomDateEntreprise.classList.remove("hidden");
+})

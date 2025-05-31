@@ -13,7 +13,7 @@
 
     <section>
         <h3>crée un formulaire(nom, prénom, age), récupéré les informations et les afficher dans une phrase</h3>
-        <button class="btnHidden"  data-target="1">
+        <button class="btnHidden" data-target="1">
             <span>Afficher l'exercice</span>
             <span class="icone" aria-label="fleche, afficher l'exercice" aria-expanded="Afficher l'exercice">▶</span>
         </button>
@@ -40,7 +40,7 @@
         </button>
 
         <div id="loginContainer">
-         
+
 
         </div>
 
@@ -54,7 +54,28 @@
             <span class="icone" aria-label="fleche, afficher l'exercice" aria-expanded="Afficher l'exercice">▶</span>
         </button>
 
+        <div class="exercice3">
+            <p>Possedez vous une entreprise ?</p>
+            <div>
+                <input type="radio" name="selection" id="non" checked>
+                <label for="non">Non</label>
+            </div>
 
+            <div>
+                <input type="radio" name="selection" id="oui">
+                <label for="oui">Oui</label>
+
+            </div>
+
+            <div id="nomDateEntreprise" class="hidden">
+                <form action="" id="">
+                <label for="nameEntreprise">Quel est le nom de ton entreprise ?</label><input type="text" name="nameEntreprise" id="nameEntreprise">
+                <label for="dateEntreprise">Quel est la date de création de ton entreprise ?</label><input type="date" name="dateEntreprise" id="dateEntreprise">
+                <button type="submit">Envoyer</button>
+                </form>
+            </div>
+
+        </div>
 
     </section>
 
