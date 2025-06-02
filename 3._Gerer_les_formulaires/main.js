@@ -5,7 +5,7 @@ btnHidden.forEach(bouton => bouton.addEventListener("click", () => {
     let nbtarget = bouton.dataset.target;
     console.log(nbtarget)
     containerHidden.forEach(container => {
-        if(container.dataset.target == nbtarget){
+        if (container.dataset.target == nbtarget) {
             container.classList.toggle("hidden")
         }
     });
@@ -41,7 +41,7 @@ let loginFalse = `<form action="" method="" id="formLogin">
             </form>`;
 
 
-            localStorage.clear()
+localStorage.clear()
 // localStorage.setItem("loginNickname", "Damien");
 // localStorage.setItem("loginPassword", "XXXXXXX")
 
@@ -54,8 +54,8 @@ isLog === true ? isConnected() : loginContainer.innerHTML = loginFalse;;
 
 
 function isConnected() {
-        nickname = localStorage.getItem("loginNickname");
-        loginContainer.innerHTML =  `Bienvenue ${localStorage.getItem("loginNickname")}`;
+    nickname = localStorage.getItem("loginNickname");
+    loginContainer.innerHTML = `Bienvenue ${localStorage.getItem("loginNickname")}`;
 }
 
 
@@ -70,16 +70,16 @@ function isNotConnected() {
 }
 
 async function hashSHA256(text) {
-  const encoder = new TextEncoder();
-  const data = encoder.encode(text.trim());
-  const hashBuffer = await crypto.subtle.digest("SHA-256", data);
-  const hashArray = Array.from(new Uint8Array(hashBuffer));
-  return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+    const encoder = new TextEncoder();
+    const data = encoder.encode(text.trim());
+    const hashBuffer = await crypto.subtle.digest("SHA-256", data);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
 }
 
 async function comparePassword(input, storedHash) {
-  const inputHash = await hashSHA256(input);
-  return inputHash === storedHash;
+    const inputHash = await hashSHA256(input);
+    return inputHash === storedHash;
 }
 
 
@@ -89,12 +89,55 @@ let non = document.getElementById("non");
 let oui = document.getElementById("oui");
 let nomDateEntreprise = document.getElementById("nomDateEntreprise");
 
-non.addEventListener("change", ()=>{
-    if(non.checked === true){
+non.addEventListener("change", () => {
+    if (non.checked === true) {
         nomDateEntreprise.classList.add("hidden");
     }
 })
 
-oui.addEventListener("change", ()=>{
-     nomDateEntreprise.classList.remove("hidden");
+oui.addEventListener("change", () => {
+    nomDateEntreprise.classList.remove("hidden");
+})
+
+// exercice 4
+
+let convertLeft = document.getElementById("convertLeft");
+let convertRight = document.getElementById("convertRight");
+let arrow = document.getElementById("arrow");
+let btnConvert = document.getElementById("btnConvert");
+
+console.log(convertLeft.name)
+console.log(convertRight.name)
+
+arrow.addEventListener("click", () => {
+    if (arrow.classList.contains("invert")) {
+        arrow.classList.remove("invert")
+        convertLeft.value = "";
+        convertRight.value = "";
+        convertLeft.name = "dollars"
+        convertRight.name = "euros"
+        convertLeft.placeholder = "Dollars"
+        convertRight.placeholder = "Euros"
+
+    } else {
+        arrow.classList.add("invert");
+        convertLeft.value = "";
+        convertRight.value = "";
+        convertLeft.name = "euros"
+        convertRight.name = "dollars"
+        convertLeft.placeholder = "Euros"
+        convertRight.placeholder = "Dollars"
+
+    }
+    console.log(arrow.classList)
+})
+
+btnConvert.addEventListener("click", () => {
+    let nbConvert = convertLeft.value;
+    if (convertLeft.name === "euros") {
+        convertRight.value = Math.floor(Number(nbConvert) * 1.14);
+
+    }else{
+        convertRight.value = Math.floor(Number(nbConvert) * 0.84);
+    }
 })
