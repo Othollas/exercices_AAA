@@ -33,32 +33,7 @@ button.clean:focus {
 
 select{display: block;}
 
-header{
-    ul{
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        
-        li{
-          font-family: 'Open Sans', Courier, monospace;
-          a{
-            color: black;
-            text-decoration: none;
-            
-            }
-            &:hover{
-              color: blue;
-              a{
-                color: blue;
-              }
-          }
-          
-            list-style: none;
-        }
-    }
-    height: 50px;
-    border-bottom: 1px solid black;
-}
+
 
 
 

@@ -4,11 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>utilisation du DOM</title>
+    <title>Gerer les formulaire</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../headerStyle.css">
 </head>
 
 <body>
+
+    <header>
+        <ul>
+            <li class="link">0. <a href="../index.html">Les bases</a></li>
+            <li class="link">1. <a href="../1. Utiliser l'algorithme pour résoudre des problèmes/index.html">Utiliser
+                    l'algorithme pour résoudre des problèmes</a></li>
+            <li class="link">2. <a href="../2. Utiliser le DOM/index.html">Utiliser le DOM</a></li>
+            <li class="link">3. <a href="../3._Gerer_les_formulaires/index.html">Gerer les formulaire</a></li>
+            <li class="link">4. <a href="../4. Introduction à la POO/index.html">Introduction à la POO</a></li>
+        </ul>
+    </header>
 
 
     <section>
@@ -34,27 +46,28 @@
 
     <section>
         <h3>Crée une authentification grace à un formulaire</h3>
-        <button>
+        <button class="btnHidden" data-target="2">
             <span>Afficher l'exercice</span>
             <span class="icone" aria-label="fleche, afficher l'exercice" aria-expanded="Afficher l'exercice">▶</span>
         </button>
 
-        <div id="loginContainer">
+        <div class="exercice2 hidden" data-target="2">
+            <div id="loginContainer">
 
 
+            </div>
         </div>
-
     </section>
 
 
     <section>
         <h3>Crée un formulaire avec choix conditionnel</h3>
-        <button>
+        <button class="btnHidden" data-target="3">
             <span>Afficher l'exercice</span>
             <span class="icone" aria-label="fleche, afficher l'exercice" aria-expanded="Afficher l'exercice">▶</span>
         </button>
 
-        <div class="exercice3">
+        <div class="exercice3 hidden" data-target="3">
             <p>Possedez vous une entreprise ?</p>
             <div>
                 <input type="radio" name="selection" id="non" checked>
@@ -69,9 +82,11 @@
 
             <div id="nomDateEntreprise" class="hidden">
                 <form action="" id="">
-                <label for="nameEntreprise">Quel est le nom de ton entreprise ?</label><input type="text" name="nameEntreprise" id="nameEntreprise">
-                <label for="dateEntreprise">Quel est la date de création de ton entreprise ?</label><input type="date" name="dateEntreprise" id="dateEntreprise">
-                <button type="submit">Envoyer</button>
+                    <label for="nameEntreprise">Quel est le nom de ton entreprise ?</label><input type="text"
+                        name="nameEntreprise" id="nameEntreprise">
+                    <label for="dateEntreprise">Quel est la date de création de ton entreprise ?</label><input
+                        type="date" name="dateEntreprise" id="dateEntreprise">
+                    <button type="submit">Envoyer</button>
                 </form>
             </div>
 
@@ -84,14 +99,16 @@
 
     <section>
         <h3>crée un convertisseur euro -> yen </h3>
-        <button>
+        <button class="btnHidden" data-target="4">
             <span>Afficher l'exercice</span>
             <span class="icone" aria-label="fleche, afficher l'exercice" aria-expanded="Afficher l'exercice">▶</span>
         </button>
 
-        <div class="exercice4">
+        <div class="exercice4 hidden" data-target="4">
             <div class="convertisseur">
-                <input type="number" name="euros" id="convertLeft" placeholder="Euros"> <span id="arrow"><==></span> <input type="number" name="dollars" id="convertRight" placeholder="dollars">
+                <input type="number" name="euros" id="convertLeft" placeholder="Euros"> <span id="arrow">
+                    <==>
+                </span> <input type="number" name="dollars" id="convertRight" placeholder="dollars">
                 <button type="submit" id="btnConvert">Convertir</button>
             </div>
         </div>
@@ -101,5 +118,6 @@
 
 </body>
 <script src="main.js"></script>
+<script src="../header.js"></script>
 
 </html>

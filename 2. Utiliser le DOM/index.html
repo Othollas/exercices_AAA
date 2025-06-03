@@ -4,17 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>utilisation du DOM</title>
+    <title>Utiliser le DOM</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../headerStyle.css">
 </head>
 
 <body>
 
+    <header>
+        <ul>
+            <li class="link">0. <a href="../index.html">Les bases</a></li>
+            <li class="link">1. <a href="../1. Utiliser l'algorithme pour résoudre des problèmes/index.html">Utiliser
+                    l'algorithme pour résoudre des problèmes</a></li>
+            <li class="link">2. <a href="../2. Utiliser le DOM/index.html">Utiliser le DOM</a></li>
+            <li class="link">3. <a href="../3._Gerer_les_formulaires/index.html">Gerer les formulaire</a></li>
+            <li class="link">4. <a href="../4. Introduction à la POO/index.html">Introduction à la POO</a></li>
+        </ul>
+    </header>
+
+
     <section>
         <h3>Créer une liste dynamiquement</h3>
-        <button class="btnHidden"  data-target="1">
+        <button class="btnHidden" data-target="1">
             <span>Afficher l'exercice</span>
-            <span class="icone" aria-label="fleche, afficher l'exercice" aria-expanded="Afficher l'exercice" data-target="1">▶</span>
+            <span class="icone" aria-label="fleche, afficher l'exercice" aria-expanded="Afficher l'exercice"
+                data-target="1">▶</span>
         </button>
 
 
@@ -29,13 +43,13 @@
 
     <section>
         <h3>Créer un incrementeur et un decrementeur</h3>
-        <button class="btnHidden"  data-target="2">
+        <button class="btnHidden" data-target="2">
             <span>Afficher l'exercice</span>
             <span class="icone" aria-label="fleche, afficher l'exercice" aria-expanded="Afficher l'exercice">▶</span>
         </button>
 
 
-        <div id="compteurContainer" class="hidden"  data-target="2">
+        <div id="compteurContainer" class="hidden" data-target="2">
 
             <button class="moins">-</button>
             <span class="compteur"></span>
@@ -48,28 +62,31 @@
 
     <section>
         <h3>Afficher ou cacher l'image grace au DOM</h3>
-        <button class="btnHidden"  data-target="3">
+        <button class="btnHidden" data-target="3">
             <span>Afficher l'exercice</span>
             <span class="icone" aria-label="fleche, afficher l'exercice" aria-expanded="Afficher l'exercice">▶</span>
         </button>
 
         <div class="image hidden" data-target="3">
-            <img class="imgKuroTora hidden" src="./tora kuro mignon.png" alt="image chats mignon mais insistant">
+
             <div>
                 <button class="btnHide">Montrer L'image</button>
             </div>
+
+            <img class="imgKuroTora hidden" src="./tora kuro mignon.png" alt="image chats mignon mais insistant">
+
         </div>
 
     </section>
 
     <section>
         <h3>création d'un chronometre</h3>
-        <button class="btnHidden"  data-target="4">
+        <button class="btnHidden" data-target="4">
             <span>Afficher l'exercice</span>
             <span class="icone" aria-label="fleche, afficher l'exercice" aria-expanded="Afficher l'exercice">▶</span>
         </button>
 
-        <div id="chrono" class="hidden"  data-target="4">
+        <div id="chrono" class="hidden" data-target="4">
             <button class="startPause">start/pause</button>
             <button class="reset">Reset</button>
             <span class="chrono"></span>
@@ -79,5 +96,6 @@
 
 </body>
 <script src="main.js"></script>
+<script src="../header.js"></script>
 
 </html>

@@ -106,8 +106,6 @@ let convertRight = document.getElementById("convertRight");
 let arrow = document.getElementById("arrow");
 let btnConvert = document.getElementById("btnConvert");
 
-console.log(convertLeft.name)
-console.log(convertRight.name)
 
 arrow.addEventListener("click", () => {
     if (arrow.classList.contains("invert")) {
@@ -129,7 +127,6 @@ arrow.addEventListener("click", () => {
         convertRight.placeholder = "Dollars"
 
     }
-    console.log(arrow.classList)
 })
 
 btnConvert.addEventListener("click", () => {

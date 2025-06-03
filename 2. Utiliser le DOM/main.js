@@ -15,7 +15,7 @@ btnHidden.forEach(bouton => bouton.addEventListener("click", () => {
 // exercice 1
 
 let exercice1Container = document.getElementById("exercice1");
-let ulContainer = document.querySelector("ul");
+let ulContainer = document.querySelector(".ulContainer");
 let listArray = ["Fraise", "Boeuf", "Farine", "Sucre"];
 let listDiv = "";
 listArray.forEach((element, index) => {
