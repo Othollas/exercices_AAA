@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,64 +8,148 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../headerStyle.css">
 </head>
+
 <body>
-    
-        <header>
+
+    <header>
         <ul>
             <li class="link">0. <a href="../index.html">Les bases</a></li>
-            <li class="link">1. <a href="../1. Utiliser l'algorithme pour résoudre des problèmes/index.html">Utiliser l'algorithme pour résoudre des problèmes</a></li>
+            <li class="link">1. <a href="../1. Utiliser l'algorithme pour résoudre des problèmes/index.html">Utiliser
+                    l'algorithme pour résoudre des problèmes</a></li>
             <li class="link">2. <a href="../2. Utiliser le DOM/index.html">Utiliser le DOM</a></li>
             <li class="link">3. <a href="../3._Gerer_les_formulaires/index.html">Gerer les formulaire</a></li>
             <li class="link">4. <a href="../4. Introduction à la POO/index.html">Introduction à la POO</a></li>
         </ul>
     </header>
 
-    
-<section>
-        <h3>Créer Classe Personne qui aura comme atribut le nom et l'age et une methode sePresenter()</h3>
-            <button>
-                <span>Afficher l'exercice</span>
-                <span class="icone" aria-label="fleche, afficher l'exercice"
-                    aria-expanded="Afficher l'exercice">▶</span>
-            </button>
-        
-        
+
+    <section class="section1">
+        <h3>Classe Personne et méthode de présentation</h3>
+
+        <button class="btnHidden" data-target="1-1">
+            <span>Afficher l'enoncer</span>
+            <span></span>
+        </button>
+
+        <div class="enoncer1 hidden" data-target="1-1">
+            <p>Crée une classe Personne avec :</p>
+
+            <ul>
+                <li>nom, âge comme attributs</li>
+                <li>une méthode sePresenter() qui affiche une phrase du type : "Bonjour, je m'appelle X et j'ai Y ans.
+                </li>
+            </ul>
+        </div>
+
+
+        <button class="btnHidden" data-target="1">
+            <span>Afficher l'exercice</span>
+            <span class="icone" aria-label="fleche, afficher l'exercice" aria-expanded="Afficher l'exercice">▶</span>
+        </button>
+
+        <div class="exercice1 hidden" data-target="1">
+
+        </div>
+
     </section>
 
-<section>
-        <h3>Gestion d'une liste d'objets</h3>
-            <button>
-                <span>Afficher l'exercice</span>
-                <span class="icone" aria-label="fleche, afficher l'exercice"
-                    aria-expanded="Afficher l'exercice">▶</span>
-            </button>
-        
-        
+    <section class="section2">
+        <h3>Encapsulation et gestion de l'âge</h3>
+
+        <button class="btnHidden" data-target="2-2">
+            <span>Afficher l'enoncer</span>
+            <span></span>
+        </button>
+
+        <div class="enoncer1 hidden" data-target="2-2">
+            <p>Reprends la classe Personne. Rends l'âge protégé (ou privé si non JS) et ajoute :</p>
+
+            <ul>
+                <li>une méthode vieillir() qui augmente l’âge</li>
+                <li>une méthode pour récupérer l’âge</li>
+            </ul>
+        </div>
+
+        <button class="btnHidden" data-target="2">
+            <span>Afficher l'exercice</span>
+            <span class="icone" aria-label="fleche, afficher l'exercice" aria-expanded="Afficher l'exercice">▶</span>
+        </button>
+
+        <div class="exercice2 hidden" data-target="2">
+
+        </div>
+
     </section>
 
     <section>
-        <h3>Afficher ou cacher l'image grace au DOM</h3>
-            <button>
-                <span>Afficher l'exercice</span>
-                <span class="icone" aria-label="fleche, afficher l'exercice"
-                    aria-expanded="Afficher l'exercice">▶</span>
-            </button>
-        
-        
+        <h3>Héritage avec classe Employé</h3>
+
+        <button class="btnHidden" data-target="3-3">
+            <span>Afficher l'enoncer</span>
+            <span></span>
+        </button>
+
+        <div class="enoncer1 hidden" data-target="3-3">
+
+            <p>Crée une classe Employe qui hérite de Personne :</p>
+
+            <ul>
+                <li>Ajoute un attribut poste</li>
+                <li>Surcharge la méthode sePresenter() pour inclure le poste</li>
+            </ul>
+        </div>
+
+        <button class="btnHidden" data-target="3">
+            <span class="titreEnoncer">Afficher l'exercice</span>
+            <span class="icone" aria-label="fleche, afficher l'exercice" aria-expanded="Afficher l'exercice">▶</span>
+        </button>
+
+        <div class="exercice3 hidden" data-target="3">
+
+        </div>
+
     </section>
 
     <section>
-        <h3>création d'un chronometre</h3>
-            <button>
-                <span>Afficher l'exercice</span>
-                <span class="icone" aria-label="fleche, afficher l'exercice"
-                    aria-expanded="Afficher l'exercice">▶</span>
-            </button>
-        
-        
+        <h3>Gestion d'une liste d'objets Employés</h3>
+
+        <button class="btnHidden" data-target="4-4">
+            <span>Afficher l'enoncer</span>
+            <span></span>
+        </button>
+
+        <div class="enoncer1 hidden" data-target="4-4">
+
+
+
+    Permet d'ajouter des employés dans une liste
+
+    Affiche tous les employés
+
+    Permet de chercher un employé par nom
+
+            <p>Crée une classe Employe qui hérite de Personne :</p>
+
+            <ul>
+                <li>Permet d'ajouter des employés dans une liste</li>
+                <li>Affiche tous les employés</li>
+                <li>Permet de chercher un employé par nom</li>
+            </ul>
+        </div>
+
+        <button class="btnHidden" data-target="4">
+            <span>Afficher l'exercice</span>
+            <span class="icone" aria-label="fleche, afficher l'exercice" aria-expanded="Afficher l'exercice">▶</span>
+        </button>
+
+        <div class="exercice4 hidden" data-target="4">
+
+        </div>
+
     </section>
 
 </body>
 <script src="../4. Introduction à la POO/main.js"></script>
 <script src="../header.js"></script>
+
 </html>
