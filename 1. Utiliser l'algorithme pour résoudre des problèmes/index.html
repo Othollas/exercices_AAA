@@ -10,10 +10,11 @@
 </head>
 
 <body>
-      <header>
+    <header>
         <ul>
             <li class="link">0. <a href="../index.html">Les bases</a></li>
-            <li class="link">1. <a href="../1. Utiliser l'algorithme pour résoudre des problèmes/index.html">Utiliser l'algorithme pour résoudre des problèmes</a></li>
+            <li class="link">1. <a href="../1. Utiliser l'algorithme pour résoudre des problèmes/index.html">Utiliser
+                    l'algorithme pour résoudre des problèmes</a></li>
             <li class="link">2. <a href="../2. Utiliser le DOM/index.html">Utiliser le DOM</a></li>
             <li class="link">3. <a href="../3._Gerer_les_formulaires/index.html">Gerer les formulaire</a></li>
             <li class="link">4. <a href="../4. Introduction à la POO/index.html">Introduction à la POO</a></li>
@@ -28,13 +29,13 @@
     <section>
 
         <div id="minor_or_major">
-            <h3>Etre mineur ou majeur</h3>
+            <h3>Vérification de la majorité</h3>
             <button class="btnHidden" data-target="1-1-1">
                 <span>Afficher l'énoncer</span>
                 <span class="icone" data-target="1" aria-label="fleche, enoncer" aria-expanded="false">▶</span>
             </button>
             <br>
-            <button class="btnHidden" data-target="1-1-1">
+            <button class="btnHidden" data-target="1-1">
                 <span>indices</span>
                 <span class="icone" data-target="1" aria-label="fleche, Résultat" aria-expanded="indice 1">▶</span>
             </button>
@@ -44,20 +45,16 @@
                 <span class="icone" data-target="1" aria-label="fleche, Résultat" aria-expanded="Résultat 1">▶</span>
             </button>
 
-            <div class="ennoncer hidden">
-                <p>
-                    Exercice 1 : Vérification de la majorité
-
-                    Crée un formulaire qui permet à l’utilisateur de saisir son âge.
-                    Au clic sur un bouton de validation :
-
-                    Si l’âge est supérieur ou égal à 18, un message indiquant que l’utilisateur est majeur s’affiche
-                    brièvement.
-
-                    Si l’âge est inférieur à 18 mais supérieur à 0, un message indiquant que l’utilisateur est mineur
-                    s’affiche.
-
-                </p>
+            <div class="enoncer! hidden" data-target="1-1-1">
+                <p>Crée un formulaire qui permet à l’utilisateur de saisir son âge.</p>
+                <ul>
+                    <li>Au clic sur un bouton de validation</li>
+                    <li>Si l’âge est supérieur ou égal à 18, un message indiquant que l’utilisateur est majeur s’affiche
+                        brièvement.</li>
+                    <li>Si l’âge est inférieur à 18 mais supérieur à 0, un message indiquant que l’utilisateur est
+                        mineur
+                        s’affiche.</li>
+                </ul>
             </div>
 
             <div class="hidden exercice" data-target="1">
@@ -73,7 +70,7 @@
     </section>
 
     <section>
-        <h3>Trouve le nombre</h3>
+        <h3>Jeu du juste prix</h3>
         <button class="btnHidden" data-target="2-2-2">
             <span>Afficher l'énoncer</span>
             <span class="icone" data-target="2-2-2" aria-label="fleche, enoncer" aria-expanded="false">▶</span>
@@ -81,7 +78,7 @@
         <br>
         <button class="btnHidden" data-target="2-2">
             <span>indices</span>
-            <span class="icone" data-target="2-2" aria-label="fleche, Résultat" aria-expanded="indice 1">▶</span>
+            <span class="icone" aria-label="fleche, Résultat" aria-expanded="indice 1">▶</span>
         </button>
         <br>
         <button class="btnHidden" data-target="2">
@@ -89,36 +86,34 @@
             <span class="icone" aria-label="fleche, Résultat" aria-expanded="Résultat 2">▶</span>
         </button>
 
-        <div class="ennoncer hidden" data-target="2-2">
-            <p>Exercice 2 : Jeu du juste prix
+        <div class="enoncer hidden" data-target="2-2-2">
+            <p>Crée un jeu où l’utilisateur doit deviner un nombre aléatoire entre 0 et 100. Il a 5 essais pour deviner
+                le bon nombre :</p>
 
-                Crée un jeu où l’utilisateur doit deviner un nombre aléatoire entre 0 et 100. Il a 3 essais pour deviner
-                le bon nombre :
-
-                S’il se trompe, un message indique si le nombre proposé est trop petit ou trop grand.
-
-                S’il trouve le bon chiffre, un message de victoire s’affiche.
-
-                Quand il n’a plus d’essais, un message de défaite s’affiche.
-                Prévois un bouton pour rejouer.</p>
+            <ul>
+                <li>S’il se trompe, un message indique si le nombre proposé est trop petit ou trop grand.</li>
+                <li>S’il trouve le bon chiffre, un message de victoire s’affiche.</li>
+                <li>Quand il n’a plus d’essais, un message de défaite s’affiche.
+                    Prévois un bouton pour rejouer.</li>
+            </ul>
         </div>
 
         <div class="hidden exercice" data-target="2">
             <label for="chiffre_utilisateur">tape un nombre entre 1 et 100</label>
             <input type="nombre" name="chiffre_utilisateur" id="chiffre_utilisateur">
             <button id="jouer">jouer</button>
-            <nav class="vie_restante">Essai restant : 3</nav>
+            <nav class="vie_restante">Essai restant : <span class="essai"></span></nav>
             <nav class="hidden" id="bas">Ton chiffre est trop bas.</nav>
             <nav class="hidden" id="haut">Ton chiffre est trop haut.</nav>
             <nav class="hidden" id="succes">Bravo Tu as bien deviner !! </nav>
-            <nav class="hidden" id="perdu">Désoler tu as perdu, mais tu peux retenter ta chance</nav>
+            <nav class="hidden" id="perdu">Désolé tu as perdu, mais tu peux retenter ta chance</nav>
             <button class="hidden" id="rejouer">rejouer</button>
         </div>
 
     </section>
 
     <section>
-        <h3>Puis je m'inscrire ?</h3>
+        <h3>Vérification de conditions</h3>
         <button class="btnHidden" data-target="3-3-3">
             <span>Afficher l'énoncer</span>
             <span class="icone" data-target="3-3-3" aria-label="fleche, enoncer" aria-expanded="false">▶</span>
@@ -135,16 +130,13 @@
         </button>
 
         <div class="ennoncer hidden" data-target="3-3">
-            <p>
-                Exercice 3 : Vérification de conditions
+            <p>Crée une fonction qui valide si une personne peut s’inscrire à une bibliothèque selon deux critères :</p>
 
-                Crée une fonction qui valide si une personne peut s’inscrire à une bibliothèque selon deux critères :
-
-                Elle a plus de 18 ans ?
-
-                Elle habite à Bordeaux ?
-                Affiche un message dans la console si les deux conditions sont remplies.
-            </p>
+            <ul>
+                <li>Elle a plus de 18 ans ?</li>
+                <li>Elle habite à Bordeaux ?</li>
+                <li>Affiche un message dans la console si les deux conditions sont remplies.</li>
+            </ul>
         </div>
 
 
@@ -167,7 +159,7 @@
     </section>
 
     <section>
-        <h3>Crée une table de multiplication.</h3>
+        <h3>Table de multiplication</h3>
         <button class="btnHidden" data-target="4-4-4">
             <span>Afficher l'énoncer</span>
             <span class="icone" data-target="4-4-4" aria-label="fleche, enoncer" aria-expanded="false">▶</span>
@@ -183,13 +175,16 @@
             <span class="icone" aria-label="fleche, Résultat 4" aria-expanded="Résultat">▶</span>
         </button>
 
-        <div class="ennoncer hidden" data-target="4-4">
-            <p>
-                Exercice 4 : Table de multiplication
+        <div class="ennoncer hidden" data-target="4-4-4">
+            <p>Crée un outil où l’utilisateur saisit un nombre :
 
-                Crée un outil où l’utilisateur saisit un nombre, puis en cliquant sur un bouton, une table de
-                multiplication de ce nombre s’affiche de 1 à 10.
-                Ajoute un bouton pour réinitialiser l’affichage.
+
+            <ul>
+                <li>En cliquant sur un bouton, une table de
+                    multiplication de ce nombre s’affiche de 1 à 10.</li>
+                <li>Ajoute un bouton pour réinitialiser l’affichage.</li>
+            </ul>
+
             </p>
         </div>
 
@@ -204,7 +199,7 @@
     </section>
 
     <section>
-        <h3>Crée une pyramide.</h3>
+        <h3>Construction d’une pyramide</h3>
         <button class="btnHidden" data-target="5-5-5">
             <span>Afficher l'énoncer</span>
             <span class="icone" data-target="5-5-5" aria-label="fleche, enoncer" aria-expanded="false">▶</span>
@@ -220,11 +215,13 @@
             <span class="icone" aria-label="fleche, Résultat 5" aria-expanded="Résultat">▶</span>
         </button>
 
-        <div class="ennoncer hidden" data-target="5-5">
-            <p>Exercice 5 : Construction d’une pyramide
-
-                Crée une pyramide de 10 étages avec un caractère choisi par l’utilisateur. La pyramide doit s’afficher
-                dans la page avec un alignement centré visuellement.</p>
+        <div class="ennoncer hidden" data-target="5-5-5">
+            <p>Crée une pyramide de 10 étages</p>
+            <ul>
+                <li>Tu dois afficher une pyramide de 10 étages en choississant un caractère</li>
+                <li>La pyramide doit s’afficher
+                    dans la page avec un alignement centré visuellement</li>
+            </ul>
         </div>
 
         <div class="hidden exercice" data-target="5">
@@ -238,7 +235,7 @@
 
 
     <section>
-        <h3>Fonction de multiplication à longueur variable.</h3>
+        <h3>Tableau de multiplications personnalisées</h3>
         <button class="btnHidden" data-target="6-6-6">
             <span>Afficher l'énoncer</span>
             <span class="icone" data-target="6-6-6" aria-label="fleche, enoncer" aria-expanded="false">▶</span>
@@ -254,16 +251,17 @@
             <span class="icone" aria-label="fleche, Résultat 6" aria-expanded="Résultat">▶</span>
         </button>
 
-        <div class="enoncer hidden" data-target="6-6">
-            Exercice 6 : Tableau de multiplications personnalisées
+        <div class="enoncer hidden" data-target="6-6-6">
 
-            Crée une fonction qui prend deux nombres en entrée :
 
-            un multiplicateur
-
-            une longueur
-            Elle génère une liste des multiplications du nombre jusqu’à la longueur donnée (ex: 3 x 1, 3 x 2, ..., 3 x
-            n).
+            <p>Crée une fonction qui prend deux nombres en entrée :</p>
+            <ul>
+                <li>Un multiplicateur.</li>
+                <li>Une longueur.</li>
+                <li>Elle génère une liste des multiplications du nombre jusqu’à la longueur donnée (ex: 3 x 1, 3 x 2,
+                    ..., 3 x
+                    n)</li>
+            </ul>
         </div>
 
         <div class="hidden exercice" data-target="6">
@@ -280,7 +278,7 @@
 
 
     <section>
-        <h3>Manipuler les tableaux</h3>
+        <h3>Quiz sur les tableaux</h3>
         <button class="btnHidden" data-target="7-7-7">
             <span>Afficher l'énoncer</span>
             <span class="icone" data-target="7-7-7" aria-label="fleche, énoncer" aria-expanded="false">▶</span>
@@ -299,12 +297,15 @@
 
         <!-- Ici je vais realiser un qcm pour sur les arrays, à chaque question, 4 reponses possible et si la personne arrive à repondre alors elle passe à la question suivante. Tout d'abord en raw, puis je vais faire avec des animations ensuite.    -->
 
-        <div class="enoncer hidden" data-target="7-7">
-            <p>Exercice 7 : Quiz sur les tableaux
-
-                Crée un quiz en 4 questions sur les méthodes de manipulation de tableaux en JavaScript. L’utilisateur
-                doit cocher la bonne réponse parmi 4 propositions, puis valider. À chaque bonne réponse, on passe à la
-                question suivante. À la fin, un message signale que le quiz est terminé.</p>
+        <div class="enoncer hidden" data-target="7-7-7">
+            <p>Crée un quiz en 4 questions sur les méthodes de manipulation de tableaux en JavaScript.</p>
+            <ul>
+                <li>L’utilisateur
+                    doit cocher la bonne réponse parmi 4 propositions, puis valider.</li>
+                <li>À chaque bonne réponse, on passe à la
+                    question suivante.</li>
+                <li>À la fin, un message signale que le quiz est terminé.</li>
+            </ul>
         </div>
 
         <div id="qcm" class="hidden exercice" data-target="7">
@@ -334,5 +335,6 @@
 
 </body>
 <script src="main.js"></script>
-<script src="../header.js"></script>
+<script src="../headerStyle.css"></script>
+
 </html>

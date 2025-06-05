@@ -44,7 +44,10 @@ let gagnant = document.getElementById("succes");
 let perdu = document.getElementById("perdu");
 let trop_bas = document.getElementById("bas");
 let trop_haut = document.getElementById("haut");
-let score = 3
+let essai = document.querySelector(".essai");
+let score = 5
+
+essai.innerHTML = score;
 
 jouer.addEventListener("click", () => {
     let chiffre_utilisateur = document.getElementById("chiffre_utilisateur").value;
@@ -55,9 +58,11 @@ jouer.addEventListener("click", () => {
     if (chiffre_a_deviner > chiffre_utilisateur && score != 0) {
         trop_bas.classList.remove("hidden");
         score -= 1;
+        score === 0 ? essai.innerHTML = "Derniere tentative" : essai.innerHTML = score;
     } else if (chiffre_a_deviner < chiffre_utilisateur && score != 0) {
         trop_haut.classList.remove("hidden");
         score -= 1;
+        score === 0 ? essai.innerHTML = "Derniere tentative" : essai.innerHTML = score;
     } else if (chiffre_a_deviner == chiffre_utilisateur) {
         gagnant.classList.remove("hidden");
         jouer.disabled = true;
@@ -73,7 +78,7 @@ rejouer.addEventListener("click", () => {
     rejouer.classList.add("hidden");
     perdu.classList.add("hidden");
     gagnant.classList.add("hidden");
-    score = 3;
+    score = 5;
     jouer.disabled = false
 })
 
